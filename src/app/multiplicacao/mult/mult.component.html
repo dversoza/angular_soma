@@ -1,0 +1,10 @@
+<form method="POST">
+  Fator 1: <input #fat1 type="text"> <br>
+  Fator 2: <input #fat2 type="text"> <br>
+  Resultado: <input type="text" [value]="resultado"
+  readonly> <br>
+  <input type="button"
+  (click)="multiplicar(fat1.value, fat2.value)"
+  value="Multiplicar"
+  >
+</form>

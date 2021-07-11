@@ -1,0 +1,7 @@
+<form method="POST">
+  Num1: <input #n1 type="text"> <br>
+  Num2: <input #n2 type="text"> <br>
+  Resultado: <input [value]="talquetal" type="text" disabled readonly> <br>
+  <input type="button" (click)="divisao(n1.value, n2.value)"
+  value="Dividir">
+</form>

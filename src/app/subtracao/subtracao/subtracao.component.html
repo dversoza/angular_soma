@@ -1,0 +1,10 @@
+<form action="." method="post">
+  Número 1: <input #num1 type="number"> <br>
+  Número 2: <input #num2 type="number"> <br>
+  Resultado: <input type="text" [value]="resposta"> <br>
+  <input
+    type="button"
+    (click)="subtrair(num1.value, num2.value)"
+    value="Subtrair"
+    readonly>
+</form>

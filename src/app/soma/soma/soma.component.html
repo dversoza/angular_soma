@@ -1,0 +1,19 @@
+<form action="." method="POST">
+  <label for="num1">Número 1</label>
+  <input #numero1 type="number" name="num1" id="num1_input"> <br/>
+  <label for="num2">Número 2</label>
+  <input #numero2 type="number" name="num2" id="num2_input"> <br/>
+  <input
+    type="button"
+    (click)="somar(numero1.value, numero2.value)"
+    value="Somar">
+</form>
+
+<b>Resultado: </b>
+<input
+  type="text"
+  name="resultado"
+  id="resultado_input"
+  [value]="resultado"
+  readonly
+>
