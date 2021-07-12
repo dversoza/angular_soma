@@ -1,20 +1,58 @@
-<form action="." method="POST">
-  <label for="num1">Número 1</label>
-  <input #numero1 type="number" name="num1" id="num1_input"> <br/>
-  <label for="num2">Número 2</label>
-  <input #numero2 type="number" name="num2" id="num2_input"> <br/>
-  <input
-    style="color: blue;"
-    type="button"
-    (click)="somar(numero1.value, numero2.value)"
-    value="Somar">
-</form>
-
-<b>Resultado: </b>
-<input
-  type="text"
-  name="resultado"
-  id="resultado_input"
-  [value]="resultado"
-  readonly
->
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a href="#" class="navbar-brand">Projeto Soma</a>
+  </div>
+</nav>
+<div class="container">
+  <div class="col">
+    <form action="." method="POST">
+      <div class="form-group row">
+        <label for="num1" class="col-sm-2 col-form-label">Número 1</label>
+        <div class="col-sm-4">
+          <input
+            #numero1
+            class="form-control"
+            type="number"
+            name="num1"
+            id="num1_input"
+            placeholder="Número 1"
+          />
+          <small class="form-text text-muted">Digite o 1º número da soma</small>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="num2" class="col-sm-2 col-form-label">Número 2</label>
+        <div class="col-sm-4">
+          <input
+            #numero2
+            class="form-control"
+            type="number"
+            name="num2"
+            id="num2_input"
+            placeholder="Número 2"
+          />
+          <small class="form-text text-muted">Digite o 2º número da soma</small>
+        </div>
+      </div>
+      <input
+        type="button"
+        class="btn btn-primary"
+        (click)="somar(numero1.value, numero2.value)"
+        value="Somar"
+      />
+      <div class="form-group row">
+        <label for="resultado" class="col-sm-2 col-form-label"
+          >Resultado:</label
+        >
+        <div class="col-sm-4">
+          <input
+            type="text"
+            class="form-control"
+            [value]="resultado"
+            readonly
+          />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
